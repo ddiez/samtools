@@ -15,11 +15,8 @@ RUN apt-get update && \
     apt-get purge -y curl gcc make bzip2 autoconf zlib1g-dev libncurses5-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev && \
     apt-get autoremove -y
 
-## Set up environment.
-# Variables.
 ENV PATH /opt/bin:$PATH
 
-# User.
 RUN useradd -ms /bin/bash biodev
 RUN echo 'biodev:biodev' | chpasswd
 USER biodev
