@@ -6,3 +6,11 @@ samtools
 ## About
 
 Dockerfile for [samtools](https://github.com/samtools).
+
+## Usage
+
+Image available at Docker Hub.
+
+```
+docker run ddiez/samtools samtools
+```
