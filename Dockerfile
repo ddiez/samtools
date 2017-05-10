@@ -3,7 +3,6 @@ MAINTAINER Diego Diez <diego10ruiz@gmail.com>
 
 ENV VERSION=1.4.1
 
-## Install samtools.
 RUN apt-get update && \
     apt-get install -y curl gcc make bzip2 autoconf && \
     apt-get install -y zlib1g zlib1g-dev libncurses5 libncurses5-dev  && \
