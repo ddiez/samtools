@@ -11,5 +11,6 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
       docker push ddiez/samtools;
+      docker tag ddiez/samtools ddiez/samtools:1.5;
       docker push ddiez/samtools:1.5;
     fi
