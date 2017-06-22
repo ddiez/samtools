@@ -11,7 +11,7 @@ RUN apt-get update && \
     curl -L https://github.com/samtools/samtools/releases/download/$VERSION/samtools-$VERSION.tar.bz2 > /tmp/samtools-$VERSION.tar.bz2 && \
     cd /tmp && tar xfjv samtools-$VERSION.tar.bz2 && rm samtools-$VERSION.tar.bz2 && \
     cd samtools-$VERSION && ./configure && make && make prefix=/opt install && \
-    cd /tmp && rm -rf samtools-1.4 && \
+    cd /tmp && rm -rf samtools-$VERSION && \
     apt-get clean -y && \
     apt-get purge -y curl gcc make bzip2 autoconf zlib1g-dev libncurses5-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev && \
     apt-get autoremove -y
