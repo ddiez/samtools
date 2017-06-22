@@ -15,7 +15,7 @@ after_success:
       docker push ddiez/samtools;
 
       # tag and push.
-      VERSION=`docker run ddiez/foo printenv VERSION`
+      VERSION=`docker run ddiez/samtools printenv VERSION`
       docker tag ddiez/samtools ddiez/samtools:$VERSION;
       docker push ddiez/samtools:$VERSION;
     fi
