@@ -1,7 +1,7 @@
 FROM debian:testing
 MAINTAINER Diego Diez <diego10ruiz@gmail.com>
 
-ENV VERSION=1.5
+ENV VERSION=1.6
 
 RUN apt-get update && \
     apt-get install -y curl gcc make bzip2 autoconf && \
