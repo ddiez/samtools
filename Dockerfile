@@ -1,13 +1,13 @@
 FROM debian:testing
 MAINTAINER Diego Diez <diego10ruiz@gmail.com>
 
-ENV VERSION=1.6
+ENV VERSION=1.9
 
 RUN apt-get update && \
     apt-get install -y curl gcc make bzip2 autoconf && \
     apt-get install -y zlib1g zlib1g-dev libncurses5 libncurses5-dev  && \
     apt-get install -y libbz2-1.0 libbz2-dev liblzma5 liblzma-dev && \
-    apt-get install -y libcurl3 libcurl4-openssl-dev openssl libssl-dev && \
+    apt-get install -y libcurl4 libcurl4-openssl-dev openssl libssl-dev && \
     curl -L https://github.com/samtools/samtools/releases/download/$VERSION/samtools-$VERSION.tar.bz2 > /tmp/samtools-$VERSION.tar.bz2 && \
     cd /tmp && tar xfjv samtools-$VERSION.tar.bz2 && rm samtools-$VERSION.tar.bz2 && \
     cd samtools-$VERSION && ./configure && make && make prefix=/opt install && \
